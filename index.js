@@ -6,6 +6,11 @@ import * as inquirer from 'inquirer';
 // TODO: #24 Create an array of questions for user input
 const questions = [
     // TODO: #1 Prompt for project title
+    {
+        type: 'input',
+        name: 'title',
+        message: 'What is of your project\'s title?',
+    }
 
     // TODO: #3 Prompt for project description
 
