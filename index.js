@@ -9,14 +9,15 @@ const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'What is of your project\'s title?',
+        message: 'What is your project\'s title?',
     },
 
     // TODO: #3 Prompt for project description
+    // Prompt message pulled from https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
     {
-        type: 'editor',
+        type: 'input',
         name: 'description',
-        message: 'What is your project\'s description?',
+        message: 'Provide a short description explaining the what, why, and how of your project.',
     }
 
     // TODO: #5 Prompt for project installation instructions
