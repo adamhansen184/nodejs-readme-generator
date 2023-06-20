@@ -18,9 +18,15 @@ const questions = [
         type: 'input',
         name: 'description',
         message: 'Provide a short description explaining the what, why, and how of your project.',
-    }
+    },
 
     // TODO: #5 Prompt for project installation instructions
+    // Prompt message pulled from https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
+    {
+        type: 'editor',
+        name: 'installation',
+        message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.',
+    }
 
     // TODO: #7 Prompt for project usage information
 
