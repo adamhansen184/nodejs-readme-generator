@@ -35,9 +35,14 @@ const questions = [
         type: 'editor',
         name: 'usage',
         message: 'Provide instructions and examples for use.',
-    }
+    },
 
     // TODO: #9 Prompt for project contribution guidelines
+    {
+        type: 'editor',
+        name: 'contributing',
+        message: 'Provide guidelines on how other developers can contribute to your project.'
+    }
 
     // TODO: #11 Prompt for project test instructions
 
