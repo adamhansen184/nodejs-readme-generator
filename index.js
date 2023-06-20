@@ -40,8 +40,8 @@ const questions = [
     // TODO: #9 Prompt for project contribution guidelines
     {
         type: 'editor',
-        name: 'contributing',
-        message: 'Provide guidelines on how other developers can contribute to your project.'
+        name: 'contribution',
+        message: 'Provide guidelines on how other developers can contribute to your project.',
     }
 
     // TODO: #11 Prompt for project test instructions
