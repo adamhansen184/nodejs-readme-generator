@@ -10,9 +10,14 @@ const questions = [
         type: 'input',
         name: 'title',
         message: 'What is of your project\'s title?',
-    }
+    },
 
     // TODO: #3 Prompt for project description
+    {
+        type: 'editor',
+        name: 'description',
+        message: 'What is your project\'s description?',
+    }
 
     // TODO: #5 Prompt for project installation instructions
 
