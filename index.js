@@ -26,9 +26,16 @@ const questions = [
         type: 'editor',
         name: 'installation',
         message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.',
-    }
+    },
 
     // TODO: #7 Prompt for project usage information
+    // TODO: #33 Support including screenshots stored in the ./assets/images folder in the README file
+    // Prompt message pulled from https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
+    {
+        type: 'editor',
+        name: 'usage',
+        message: 'Provide instructions and examples for use.',
+    }
 
     // TODO: #9 Prompt for project contribution guidelines
 
