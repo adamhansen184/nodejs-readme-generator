@@ -1,4 +1,4 @@
-// TODO: #23 Include packages needed for this application
+// Import packages needed for the nodejs-readme-generator application
 import * as fs from 'node:fs';
 import * as generateMarkdown from './utils/generateMarkdown.mjs';
 import * as inquirer from 'inquirer';
