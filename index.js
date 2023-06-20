@@ -28,5 +28,6 @@ function writeToFile(fileName, data) {}
 // TODO: #26 Create a function to initialize app
 function init() {}
 
+// TODO: #21 Generate professional README.md file
 // Function call to initialize app
 init();
