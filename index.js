@@ -62,6 +62,13 @@ const questions = [
         choices: licenses,
     },
 
+    // Prompt for creator name
+    {
+        type: 'input',
+        name: 'creator',
+        message: 'What is your name?',
+    },
+
     // TODO: #16 Prompt for GitHub username
     {
         type: 'input',
