@@ -1,7 +1,7 @@
 // Import packages needed for the nodejs-readme-generator application
 import * as fs from 'node:fs';
 import * as generateMarkdown from './utils/generateMarkdown.mjs';
-import * as inquirer from 'inquirer';
+import inquirer from 'inquirer';
 
 // Create an array of license choices
 // License choices and values pulled from https://choosealicense.com/ and https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository#searching-github-by-license-type
@@ -119,8 +119,30 @@ const questions = [
 // TODO: #25 Create a function to write README file
 function writeToFile(fileName, data) {}
 
-// TODO: #26 Create a function to initialize app
-function init() {}
+// A function to initialize the node-js-readme-generator application
+function init() {
+    // Use Inquirer.js
+    inquirer
+        // Prompt user for input using the questions array
+        .prompt(questions)
+        // Use answers to generate README.md file
+        .then((answers) => {
+            // TODO: #37 Use writeToFile function to generate README.md file with the answers
+            // writeToFile('README.md', answers);
+            // Temporarily log answers to console until writeToFile function is implemented
+            console.log(answers);
+        })
+        // Catch code pulled from https://www.npmjs.com/package/inquirer#installation
+        .catch((error) => {
+            if (error.isTtyError) {
+                // Prompt couldn't be rendered in the current environment
+                console.error('Prompt couldn\'t be rendered in the current environment.');
+            } else {
+                // Something else went wrong
+                console.error('Something else went wrong.');
+            }
+        });
+}
 
 // TODO: #21 Generate professional README.md file
 // Function call to initialize app
