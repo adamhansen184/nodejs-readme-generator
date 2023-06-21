@@ -38,9 +38,37 @@ function renderLicenseBadge(license) {
     }
 }
 
-// TODO: #29 Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
+// Function returns GitHub Flavored Markdown containing the License section of README file
+// Function returns an empty string if there is no license
+// Function requires a single string parameter named license
+// String parameter license should match one of the license keywords as defined on https://choosealicense.com and at https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository#searching-github-by-license-type 
+// String parameter license should match none if there is no license
+function renderLicenseSection(license) {
+    // Generate a link to the license on https://choosealicense.com using the renderLicenseLink function
+    const licenseLink = renderLicenseLink(license);
+    
+    // Return GitHub Flavored Markdown containing the License section of README file
+    switch (license) {
+        case 'apache-2.0':
+            return `## License(#license)
+Licensed under the [Apache License 2.0](${licenseLink}).`;
+        case 'gpl-2.0':
+            return `## License(#license)
+Licensed under the [GNU General Public License v2.0](${licenseLink}).`;
+        case 'gpl-3.0':
+            return `## License(#license)
+Licensed under the [GNU General Public License v3.0](${licenseLink}).`;
+        case 'isc':
+            return `## License(#license)
+Licensed under the [ISC License](${licenseLink}).`;
+        case 'mit':
+            return `## License(#license)
+Licensed under the [MIT License](${licenseLink}).`;
+        case 'none':
+        default:
+            return '';
+    }
+}
 
 // Function to generate GitHub Flavored Markdown for README file
 function generateREADME(data) {
@@ -85,7 +113,6 @@ ${data.title} was initially developed by:
 
 All inquiries about ${data.title} should be emailed to [${data.email}](mailto:${data.email}).
 
-## License(#license)
 ${licenseSection}
 
 `;
