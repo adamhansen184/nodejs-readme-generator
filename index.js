@@ -1,6 +1,6 @@
 // Import packages needed for the nodejs-readme-generator application
 import * as fs from 'node:fs';
-import * as generateMarkdown from './utils/generateMarkdown.mjs';
+import generateREADME from './utils/generateMarkdown.mjs';
 import inquirer from 'inquirer';
 
 // Create an array of license choices
@@ -128,7 +128,7 @@ function init() {
         // Use answers to generate README.md file
         .then((answers) => {
             // TODO: #37 Use writeToFile function to generate README.md file with the answers
-            // writeToFile('README.md', answers);
+            // writeToFile('README.md', generateREADME(answers));
             // Temporarily log answers to console until writeToFile function is implemented
             console.log(answers);
         })

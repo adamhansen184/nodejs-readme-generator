@@ -10,33 +10,55 @@ function renderLicenseLink(license) {}
 // If there is no license, return an empty string
 function renderLicenseSection(license) {}
 
-// TODO: #30 Create a function to generate markdown for README
-function generateMarkdown(data) {
-  // TODO: #2 Display prompted project title as README title
+// Function to generate GitHub Flavored Markdown for README file
+function generateREADME(data) {
+    // Generate a license badge using the renderLicenseBadge function
+    const licenseBadge = renderLicenseBadge(data.license);
+    // Generate a link to the license using the renderLicenseLink function
+    const licenseLink = renderLicenseLink(data.license);
+    // Generate the text of the license section using the renderLicenseSection function
+    const licenseSection = renderLicenseSection(data.license);
 
-  // TODO: #4 Display prompted project description under Description section
+    return `# ${data.title}
 
-  // TODO: #6 Display prompted project installation instructions under Installation section
+<!-- ## Badges(#badges) -->
+${licenseBadge}
 
-  // TODO: #8 Display prompted project usage information under Usage section
-  
-  // TODO: #10 Display prompted project contribution guidelines under Contributing section
-  
-  // TODO: #12 Display prompted project test instructions under Tests section
-  
-  // TODO: #14 Display badge for prompted project license
-  
-  // TODO: #15 Display prompted project license under License section
-  
-  // TODO: #17 Display prompted GitHub username under Questions section
-  
-  // TODO: #19 Display prompted email address under Questions section
-  
-  // TODO: #20 Link Table of Contents to corresponding README sections
-  
-  return `# ${data.title}
+<!-- ## Description(#description) -->
+${data.description}
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Testing](#testing)
+- [Credits](#credits)
+- [License](#license)
+
+## Installation(#installation)
+${data.installation}
+
+## Usage(#usage)
+${data.usage}
+
+## Contributing(#contributing)
+${data.contribution}
+
+## Testing(#testing)
+${data.tests}
+
+## Credits(#credits)
+${data.title} was initially developed by:
+- ${data.creator} [@${data.username}](https://github.com/${data.username})
+<!-- TODO: #39 Add support for multiple creators -->
+<!-- TODO: #40 Add support for (multiple) collaborators  -->
+
+All inquiries about ${data.title} should be emailed to [${data.email}](mailto:${data.email}).
+
+## License(#license)
+${licenseSection}
 
 `;
 }
 
-export default generateMarkdown;
+export default generateREADME;
