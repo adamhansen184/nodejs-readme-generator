@@ -15,7 +15,7 @@ function generateMarkdown(data) {
     // TODO: #2 Display prompted project title as README title
 
     // TODO: #4 Display prompted project description under Description section
-    
+
     // TODO: #6 Display prompted project installation instructions under Installation section
 
     // TODO: #8 Display prompted project usage information under Usage section
@@ -32,9 +32,32 @@ function generateMarkdown(data) {
 
     // TODO: #19 Display prompted email address under Questions section
 
-    // TODO: #20 Link Table of Contents to corresponding README sections
+    // Link Table of Contents to corresponding README sections
 
     return `# ${data.title}
+
+<!-- Badges -->
+<!-- Description -->
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Testing](#testing)
+- [Credits](#credits)
+- [License](#license)
+
+## Installation(#installation)
+
+## Usage(#usage)
+
+## Contributing(#contributing)
+
+## Testing(#testing)
+
+## Credits(#credits)
+
+## License(#license)
 
 `;
 }
