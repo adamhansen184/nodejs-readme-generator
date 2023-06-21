@@ -10,8 +10,8 @@ function renderLicenseLink(license) {}
 // If there is no license, return an empty string
 function renderLicenseSection(license) {}
 
-// TODO: #30 Create a function to generate markdown for README
-function generateMarkdown(data) {
+// Function to generate GitHub Flavored Markdown for README file
+function generateREADME(data) {
     // Generate a license badge using the renderLicenseBadge function
     const licenseBadge = renderLicenseBadge(data.license);
     // Generate a link to the license using the renderLicenseLink function
@@ -61,4 +61,4 @@ ${licenseSection}
 `;
 }
 
-export default generateMarkdown;
+export default generateREADME;
