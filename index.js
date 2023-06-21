@@ -119,7 +119,7 @@ const questions = [
 // TODO: #25 Create a function to write README file
 function writeToFile(fileName, data) {}
 
-// TODO: #26 Create a function to initialize app
+// A function to initialize the node-js-readme-generator application
 function init() {
     // Use Inquirer.js
     inquirer
