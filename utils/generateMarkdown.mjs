@@ -19,7 +19,6 @@ function generateMarkdown(data) {
     // Generate the text of the license section using the renderLicenseSection function
     const licenseSection = renderLicenseSection(data.license);
 
-    // TODO: #15 Display prompted project license under License section
     // TODO: #17 Display prompted GitHub username under Questions section
     // TODO: #19 Display prompted email address under Questions section
     return `# ${data.title}
@@ -53,6 +52,7 @@ ${data.tests}
 ## Credits(#credits)
 
 ## License(#license)
+${licenseSection}
 
 `;
 }
