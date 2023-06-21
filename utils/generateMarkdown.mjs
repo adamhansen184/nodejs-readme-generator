@@ -19,28 +19,15 @@ function generateMarkdown(data) {
     // Generate the text of the license section using the renderLicenseSection function
     const licenseSection = renderLicenseSection(data.license);
 
-    // TODO: #2 Display prompted project title as README title
-
     // TODO: #4 Display prompted project description under Description section
-
     // TODO: #6 Display prompted project installation instructions under Installation section
-
     // TODO: #8 Display prompted project usage information under Usage section
-
     // TODO: #10 Display prompted project contribution guidelines under Contributing section
-
     // TODO: #12 Display prompted project test instructions under Tests section
-
     // TODO: #14 Display badge for prompted project license
-
     // TODO: #15 Display prompted project license under License section
-
     // TODO: #17 Display prompted GitHub username under Questions section
-
     // TODO: #19 Display prompted email address under Questions section
-
-    // Link Table of Contents to corresponding README sections
-
     return `# ${data.title}
 
 <!-- Badges -->
