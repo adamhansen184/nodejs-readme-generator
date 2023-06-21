@@ -19,7 +19,6 @@ function generateMarkdown(data) {
     // Generate the text of the license section using the renderLicenseSection function
     const licenseSection = renderLicenseSection(data.license);
 
-    // TODO: #8 Display prompted project usage information under Usage section
     // TODO: #10 Display prompted project contribution guidelines under Contributing section
     // TODO: #12 Display prompted project test instructions under Tests section
     // TODO: #15 Display prompted project license under License section
@@ -45,6 +44,7 @@ ${data.description}
 ${data.installation}
 
 ## Usage(#usage)
+${data.usage}
 
 ## Contributing(#contributing)
 
