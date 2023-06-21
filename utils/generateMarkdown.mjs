@@ -1,10 +1,19 @@
+// Function that returns the link to the license on https://choosealicense.com
+// Function returns an empty string if there is no license
+// Function requires a single string parameter named license
+// String parameter license should match one of the license keywords as defined at https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository#searching-github-by-license-type 
+// String parameter license should match none if there is no license
+function renderLicenseLink(license) {
+    if (license === 'none') {
+        return '';
+    } else {
+        return `https://choosealicense.com/licenses/${license}/`;
+    }
+}
+
 // TODO: #27 Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {}
-
-// TODO: #28 Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
 
 // TODO: #29 Create a function that returns the license section of README
 // If there is no license, return an empty string
