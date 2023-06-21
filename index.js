@@ -3,8 +3,40 @@ import * as fs from 'node:fs';
 import * as generateMarkdown from './utils/generateMarkdown.mjs';
 import * as inquirer from 'inquirer';
 
-// TODO: #34 Create an array of license choices
-const licenses = [];
+// Create an array of license choices
+// License choices and values pulled from https://choosealicense.com/ and https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository#searching-github-by-license-type
+const licenses = [
+    {
+        name: 'Apache License 2.0',
+        value: 'apache-2.0',
+        short: 'Apache 2.0',
+    },
+    {
+        name: 'GNU General Public License v2.0',
+        value: 'gpl-2.0',
+        short: 'GNU GPL v2.0',
+    },
+    {
+        name: 'GNU General Public License v3.0',
+        value: 'gpl-3.0',
+        short: 'GNU GPL v3.0',
+    },
+    {
+        name: 'ISC License',
+        value: 'isc',
+        short: 'ISC',
+    },
+    {
+        name: 'MIT License',
+        value: 'mit',
+        short: 'MIT',
+    },
+    {
+        name: 'None',
+        value: 'none',
+        short: 'None',
+    }
+];
 
 // Create an array of questions for user input
 const questions = [
