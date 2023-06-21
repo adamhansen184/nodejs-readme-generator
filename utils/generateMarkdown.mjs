@@ -19,8 +19,6 @@ function generateMarkdown(data) {
     // Generate the text of the license section using the renderLicenseSection function
     const licenseSection = renderLicenseSection(data.license);
 
-    // TODO: #17 Display prompted GitHub username under Questions section
-    // TODO: #19 Display prompted email address under Questions section
     return `# ${data.title}
 
 <!-- ## Badges(#badges) -->
@@ -50,6 +48,12 @@ ${data.contribution}
 ${data.tests}
 
 ## Credits(#credits)
+${data.title} was initially developed by:
+- ${data.creator} [@${data.username}](https://github.com/${data.username})
+<!-- TODO: #39 Add support for multiple creators -->
+<!-- TODO: #40 Add support for (multiple) collaborators  -->
+
+All inquiries about ${data.title} should be emailed to [${data.email}](mailto:${data.email}).
 
 ## License(#license)
 ${licenseSection}
