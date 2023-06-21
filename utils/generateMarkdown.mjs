@@ -28,6 +28,7 @@ function generateMarkdown(data) {
     // TODO: #19 Display prompted email address under Questions section
     return `# ${data.title}
 
+<!-- ## Badges(#badges) -->
 ${licenseBadge}
 
 <!-- ## Description(#description) -->
