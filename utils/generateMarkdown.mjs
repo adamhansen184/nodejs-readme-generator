@@ -24,13 +24,12 @@ function generateMarkdown(data) {
     // TODO: #8 Display prompted project usage information under Usage section
     // TODO: #10 Display prompted project contribution guidelines under Contributing section
     // TODO: #12 Display prompted project test instructions under Tests section
-    // TODO: #14 Display badge for prompted project license
     // TODO: #15 Display prompted project license under License section
     // TODO: #17 Display prompted GitHub username under Questions section
     // TODO: #19 Display prompted email address under Questions section
     return `# ${data.title}
 
-<!-- Badges -->
+${licenseBadge}
 <!-- Description -->
 
 ## Table of Contents
