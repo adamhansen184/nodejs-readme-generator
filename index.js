@@ -42,9 +42,14 @@ const questions = [
         type: 'editor',
         name: 'contribution',
         message: 'Provide guidelines on how other developers can contribute to your project.',
-    }
+    },
 
     // TODO: #11 Prompt for project test instructions
+    {
+        type: 'editor',
+        name: 'tests',
+        message: 'Provide examples of how to run tests for your application.',
+    }
 
     // TODO: #13 Prompt for project license
 
