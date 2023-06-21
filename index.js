@@ -60,9 +60,14 @@ const questions = [
         name: 'license',
         message: 'Choose a license for your project.',
         choices: licenses,
-    }
+    },
 
     // TODO: #16 Prompt for GitHub username
+    {
+        type: 'input',
+        name: 'username',
+        message: 'What is your GitHub username?',
+    }
 
     // TODO: #18 Prompt for email address
     
