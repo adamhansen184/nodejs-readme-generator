@@ -3,6 +3,9 @@ import * as fs from 'node:fs';
 import * as generateMarkdown from './utils/generateMarkdown.mjs';
 import * as inquirer from 'inquirer';
 
+// TODO: #34 Create an array of license choices
+const licenses = [];
+
 // TODO: #24 Create an array of questions for user input
 const questions = [
     // TODO: #1 Prompt for project title
@@ -49,9 +52,15 @@ const questions = [
         type: 'editor',
         name: 'tests',
         message: 'Provide examples of how to run tests for your application.',
-    }
+    },
 
     // TODO: #13 Prompt for project license
+    {
+        type: 'list',
+        name: 'license',
+        message: 'Choose a license for your project.',
+        choices: licenses,
+    }
 
     // TODO: #16 Prompt for GitHub username
 
