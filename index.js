@@ -67,9 +67,14 @@ const questions = [
         type: 'input',
         name: 'username',
         message: 'What is your GitHub username?',
-    }
+    },
 
     // TODO: #18 Prompt for email address
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What is your email address?',
+    }
     
 ];
 
