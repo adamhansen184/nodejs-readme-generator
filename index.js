@@ -117,7 +117,10 @@ const questions = [
 ];
 
 // TODO: #25 Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    console.log(fileName);
+    console.log(data);
+}
 
 // A function to initialize the node-js-readme-generator application
 function init() {
@@ -127,10 +130,8 @@ function init() {
         .prompt(questions)
         // Use answers to generate README.md file
         .then((answers) => {
-            // TODO: #37 Use writeToFile function to generate README.md file with the answers
-            // writeToFile('README.md', generateREADME(answers));
-            // Temporarily log answers to console until writeToFile function is implemented
-            console.log(answers);
+            // Call writeToFile function to generate a README.md file using the user's answers
+            writeToFile('README.md', generateREADME(answers));
         })
         // Catch code pulled from https://www.npmjs.com/package/inquirer#installation
         .catch((error) => {
