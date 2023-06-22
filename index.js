@@ -116,13 +116,18 @@ const questions = [
     }
 ];
 
-// TODO: #25 Create a function to write README file
+// Function to write passed data to a passed file with fileName in the ./output folder
 function writeToFile(fileName, data) {
-    console.log(fileName);
-    console.log(data);
+    // Use Node.js fs module
+    fs.writeFile(`./output/${fileName}`, data, (error) =>
+        // If there is an error, log the error
+        error ? console.error(error) :
+        // If there is no error, log the success
+        console.log(`${fileName} file generated successfully!`)
+    );
 }
 
-// A function to initialize the node-js-readme-generator application
+// Function to initialize the README Generator application
 function init() {
     // Use Inquirer.js
     inquirer
