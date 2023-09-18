@@ -50,19 +50,19 @@ function renderLicenseSection(license) {
   // Return GitHub Flavored Markdown containing the License section of README file
   switch (license) {
     case 'apache-2.0':
-      return `## License(#license)
+      return `## License
 Licensed under the [Apache License 2.0](${licenseLink}).`;
     case 'gpl-2.0':
-      return `## License(#license)
+      return `## License
 Licensed under the [GNU General Public License v2.0](${licenseLink}).`;
     case 'gpl-3.0':
-      return `## License(#license)
+      return `## License
 Licensed under the [GNU General Public License v3.0](${licenseLink}).`;
     case 'isc':
-      return `## License(#license)
+      return `## License
 Licensed under the [ISC License](${licenseLink}).`;
     case 'mit':
-      return `## License(#license)
+      return `## License
 Licensed under the [MIT License](${licenseLink}).`;
     case 'none':
     default:
@@ -71,6 +71,8 @@ Licensed under the [MIT License](${licenseLink}).`;
 }
 
 // Function to generate GitHub Flavored Markdown for README file
+// TODO: #39 Add support for multiple creators
+// TODO: #40 Add support for (multiple) collaborators
 function generateREADME(data) {
   // Generate a license badge using the renderLicenseBadge function
   const licenseBadge = renderLicenseBadge(data.license);
@@ -79,10 +81,10 @@ function generateREADME(data) {
 
   return `# ${data.title}
 
-<!-- ## Badges(#badges) -->
+<!-- ## Badges -->
 ${licenseBadge}
 
-<!-- ## Description(#description) -->
+<!-- ## Description -->
 ${data.description}
 
 ## Table of Contents
@@ -93,23 +95,21 @@ ${data.description}
 - [Credits](#credits)
 - [License](#license)
 
-## Installation(#installation)
+## Installation
 ${data.installation}
 
-## Usage(#usage)
+## Usage
 ${data.usage}
 
-## Contributing(#contributing)
+## Contributing
 ${data.contribution}
 
-## Testing(#testing)
+## Testing
 ${data.tests}
 
-## Credits(#credits)
+## Credits
 ${data.title} was initially developed by:
 - ${data.creator} [@${data.username}](https://github.com/${data.username})
-<!-- TODO: #39 Add support for multiple creators -->
-<!-- TODO: #40 Add support for (multiple) collaborators  -->
 
 All inquiries about ${data.title} should be emailed to [${data.email}](mailto:${data.email}).
 
