@@ -1,18 +1,22 @@
 {
   "name": "nodejs-readme-generator",
   "version": "1.0.0",
+  "private": true,
   "description": "Node.js Application to Generate Professional README Files",
   "exports": "./index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/adamhansen184/nodejs-readme-generator.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "Adam Hansen",
+    "email": "adamhansen@me.com",
+    "url": "https://adamhansen184.github.io/"
+  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/adamhansen184/nodejs-readme-generator/issues"
   },
