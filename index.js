@@ -116,10 +116,18 @@ const questions = [
     }
 ];
 
-// Function to write passed data to a passed file with fileName in the ./output folder
+// Function to write passed data to a passed file with fileName in the distribution (./dist) directory
 function writeToFile(fileName, data) {
-    // Use Node.js fs module
-    fs.writeFile(`./output/${fileName}`, data, (error) =>
+    // Use the Node.js fs module to create the distribution (./dist) directory
+    fs.mkdir('./dist/', { recursive: true }, (error) => 
+        // If there is an error, log the error
+        error ? console.error(error) :
+        // If there is no error, log the success
+        console.log(`Distribution directory created successfully!`)
+    );
+
+    // Use the Node.js fs module to write the file in the distribution (./dist) directory
+    fs.writeFile(`./dist/${fileName}`, data, (error) =>
         // If there is an error, log the error
         error ? console.error(error) :
         // If there is no error, log the success
