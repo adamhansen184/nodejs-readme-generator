@@ -3,6 +3,9 @@ import * as fs from 'node:fs';
 import generateREADME from './utils/generateMarkdown.mjs';
 import inquirer from 'inquirer';
 
+// Create a variable for the distribution directory name
+const distDirName = 'dist';
+
 // Create an array of license choices
 // License choices and values pulled from https://choosealicense.com/ and https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository#searching-github-by-license-type
 const licenses = [
@@ -116,18 +119,18 @@ const questions = [
     }
 ];
 
-// Function to write passed data to a passed file with fileName in the distribution (./dist) directory
+// Function to write passed data to a passed file with fileName in the distribution directory
 function writeToFile(fileName, data) {
-    // Use the Node.js fs module to create the distribution (./dist) directory
-    fs.mkdir('./dist/', { recursive: true }, (error) => 
+    // Use the Node.js fs module to create the distribution directory
+    fs.mkdir(`./${distDirName}/`, { recursive: true }, (error) => 
         // If there is an error, log the error
         error ? console.error(error) :
         // If there is no error, log the success
-        console.log(`Distribution directory created successfully!`)
+        console.log(`${distDirName} directory created successfully!`)
     );
 
-    // Use the Node.js fs module to write the file in the distribution (./dist) directory
-    fs.writeFile(`./dist/${fileName}`, data, (error) =>
+    // Use the Node.js fs module to write the file in the distribution directory
+    fs.writeFile(`./${distDirName}/${fileName}`, data, (error) =>
         // If there is an error, log the error
         error ? console.error(error) :
         // If there is no error, log the success
